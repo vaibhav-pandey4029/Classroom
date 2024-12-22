@@ -1,0 +1,121 @@
+/* Signup page container */
+.signupPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    background-color: #000;
+    color: #fff;
+}
+
+/* Form styling */
+.signupPage form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+}
+
+/* Input field styling */
+.signupPage input[type="email"],
+.signupPage input[type="text"],
+.signupPage input[type="password"],
+.signupPage select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #fff;
+    background-color: inherit;
+    color: #fff;
+    border-radius: 4px;
+
+}
+
+
+.signupPage input[type="email"] {
+    margin-bottom: 0px;
+}
+
+.signupPage input[type="text"]::placeholder,
+.signupPage input[type="email"]::placeholder,
+.signupPage input[type="password"]::placeholder {
+    color: #ccc;
+}
+
+.signupPage input[type="text"]:focus,
+.signupPage input[type="email"]:focus,
+.signupPage input[type="password"]:focus,
+.signupPage select:focus {
+    outline: none;
+    border-color: #f0f0f0;
+}
+
+/* OTP section: container for email input and send OTP button */
+.signupPage .emailOtpContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+
+/* Email input field will take 75% width */
+.emailOtpContainer input[type="email"] {
+    width: 100%;
+}
+
+/* Send OTP button styling */
+.sendOtpBtn {
+    width: 30%;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.sendOtpBtn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Signup button */
+.signupPage button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signupPage button[type="submit"]:hover {
+    background-color: #f0f0f0;
+}
+
+/* Login link styling */
+.loginLink {
+    margin-top: 15px;
+}
+
+.loginLink p {
+    color: #ccc;
+}
+
+.loginLink a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.loginLink a:hover {
+    color: #f0f0f0;
+}

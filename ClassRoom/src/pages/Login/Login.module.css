@@ -1,0 +1,78 @@
+.loginPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    background-color: #000;
+    color: #fff;
+}
+
+.loginPage h1{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    color:#fff;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding:30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.loginPage input[type="email"], input[type="password"]{
+    width: 250px;
+    padding:10px;
+    margin-bottom:15px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color:#fff;
+    border-radius: 4px;
+}
+
+.loginPage input[type="email"]::placeholder, input[type="password"]::placeholder{
+    color:#ccc;
+}
+
+.loginPage input[type="email"]:focus, input[type="password"]:focus{
+    outline:none;
+    border-color:#f0f0f0;
+}
+
+.loginPage button[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.loginPage button[type="submit"]:hover{
+    background-color: #f0f0f0;
+}
+
+.loginPage .signupLink{
+    margin-top: 15px;
+}
+
+.loginPage .signupLink p{
+    color:#ccc;
+}
+
+.loginPage .signupLink a{
+    color:#fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.loginPage .signupLink a:hover{
+    color:#f0f0f0;
+}

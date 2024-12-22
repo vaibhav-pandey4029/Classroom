@@ -1,0 +1,95 @@
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+    background-color: #000;
+    color:#fff;
+    height:60px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbarLeft{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    color:#fff;
+    text-decoration:none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-right: 20px;
+}
+
+.searchInput{
+    width: 200px;
+    padding:8px;
+    border: 2px solid #fff;
+    background-color: #222;
+    color:#fff;
+    border-radius: 4px;
+    margin-right: 10px;
+    outline:none;
+}
+
+.search-input::placeholder{
+    color:#ccc;
+}
+
+.searchInput::placeholder{
+    border-color:"#f0f0f0";
+}
+
+.size6{
+    width:24px;
+    height:24px;
+    color:#fff;
+    cursor: pointer;
+}
+
+.navbarRight{
+    display: flex;
+    align-items:center;
+}
+
+.profileIcon{
+    color:#fff;
+    text-decoration:none;
+    margin-right:15px;
+}
+
+.profileIcon svg{
+    width: 24px;
+    height:24px;
+}
+
+.logoutBtn{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color:#fff;
+    padding:8px 15px;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:0.9rem;
+}
+
+.logoutBtm:hover{
+    background-color: #f0f0f0;
+    color:#000;
+}
+.loginBtn{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color:#fff;
+    padding:8px 15px;
+    border-radius:4px;
+    cursor:pointer;
+    text-decoration: none;
+    font-size:0.9rem;
+}
+
+.loginBtn:hover{
+    background-color: #f0f0f0;
+    color:#000;
+}
