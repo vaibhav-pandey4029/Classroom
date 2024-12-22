@@ -129,11 +129,11 @@ router.post('/register',async (req,res)=>{
 router.post('/login',async (req,res)=>{
     try{
         const {email,password} =  req.body;
-        const user = User.findOne({email});
+        const user = await User.findOne({email});
         if(!user){
             return responseFunction(res,400,'Invalid credentials',null,false);
         }
-        const isMatch = User.compare(password,user.password);
+        const isMatch = await bcrypt.compare(password, user.password);
         if(!isMatch){
             return responseFunction(res,400,'Incorrect credentials',null,false);
         }
@@ -142,13 +142,13 @@ router.post('/login',async (req,res)=>{
         res.cookie('authToken',authToken,{httpOnly:true,secure:true,sameSite:'none'});
         res.cookie('refreshToken',refreshToken,{httpOnly:true,secure:true,sameSite:'none'})
         user.password =undefined;
-        return responseFunction(res,200,'Logged in Successfully',null,false);
+        return responseFunction(res,200,'Logged in Successfully',{ user, authToken, refreshToken },true);
     }catch(error){
         return responseFunction(res,400,'Internal server error',null,false);
     }
 })
 
-router.post('/checkLogin',authTokenHandler,async (req,res)=>{
+router.get('/checklogin',authTokenHandler,async (req,res)=>{
     res.json({
         ok:req.ok,
         message:req.message,

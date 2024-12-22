@@ -1,4 +1,4 @@
 export interface User{
-    user:string|null;
+    user:any;
     loading:boolean
 }

@@ -34,7 +34,7 @@ const Signup = () => {
       if(response.ok) {
         toast.success('Registration Successful');
         login({email,role});
-        navigate('/');
+        navigate('/login');
       }else{
         toast.error(data.message||'Registration failed');
       }

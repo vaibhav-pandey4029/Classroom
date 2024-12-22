@@ -25,10 +25,10 @@ function checkAuth(req,res,next){
                 }
             })
         }else{
-            req.userId = refreshDecoded.userId;
+            req.userId = decoded.userId;
             req.message = "Authentication Successful";
-            next();
             req.ok = true;
+            next();
         }
     })
 }

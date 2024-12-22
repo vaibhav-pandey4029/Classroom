@@ -18,7 +18,7 @@ export const AuthProvider = ({children}:IProtectedRouteProps) => {
     },[])
     const login = (userData:string|null)=>{ 
         localStorage.setItem('user',JSON.stringify(userData));
-        setAuth({user:userData,loading:false})
+        setAuth({user:userData,loading:false});
     }
     const logout = ()=>{
         localStorage.removeItem('user');
